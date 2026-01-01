@@ -22,6 +22,35 @@
       href="/_next/static/css/2b6357eb0b6682a3.css"
       data-precedence="next"
     />
+    <style>
+      /* Force equal height cards - targets by existing classes that survive React hydration */
+
+      /* Team section (bg-gray-50) */
+      section.bg-gray-50 .max-w-6xl .grid > div {
+        display: flex !important;
+      }
+      section.bg-gray-50 .max-w-6xl .grid > div > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      section.bg-gray-50 .max-w-6xl .grid > div > div > p:last-child {
+        flex: 1;
+      }
+
+      /* H.O.T. section (bg-gray-900) */
+      section.bg-gray-900 .max-w-6xl .grid > div {
+        display: flex !important;
+      }
+      section.bg-gray-900 .max-w-6xl .grid > div > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      section.bg-gray-900 .max-w-6xl .grid > div > div > p:last-child {
+        flex: 1;
+      }
+    </style>
     <link
       rel="preload"
       as="script"
@@ -270,7 +299,7 @@
                 <div
                   class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4"
                 >
-                  <i class="ri-target-line text-2xl"></i>
+                  <i class="ri-medal-line text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Quality</h3>
                 <p class="text-gray-600">
@@ -442,7 +471,7 @@
                 <div
                   class="w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0"
                 >
-                  <i class="ri-lightning-line text-xl"></i>
+                  <i class="ri-pulse-line text-xl"></i>
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-900 mb-2">
@@ -554,7 +583,7 @@
           </div>
         </div>
       </section>
-      <section class="py-20 bg-gray-50">
+      <section id="team-section" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             class="transition-all ease-out"
@@ -576,7 +605,7 @@
               </p>
             </div>
           </div>
-          <div class="grid md:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-3 gap-8 items-stretch">
             <div
               class="transition-all ease-out"
               style="
@@ -584,9 +613,10 @@
                 transform: translateY(30px);
                 transition-duration: 600ms;
                 transition-delay: 0ms;
+                display: flex;
               "
             >
-              <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+              <div class="bg-white rounded-lg p-6 shadow-lg text-center w-full">
                 <img
                   src="/img/kbr_team/kenny_bayliss.jpg"
                   alt="Kenny Bayliss"
@@ -612,9 +642,10 @@
                 transform: translateY(30px);
                 transition-duration: 600ms;
                 transition-delay: 200ms;
+                display: flex;
               "
             >
-              <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+              <div class="bg-white rounded-lg p-6 shadow-lg text-center w-full">
                 <img
                   src="/img/kbr_team/Kayla_Manager_KBRgirls.jpg"
                   alt="Kayla"
@@ -637,9 +668,10 @@
                 transform: translateY(30px);
                 transition-duration: 600ms;
                 transition-delay: 400ms;
+                display: flex;
               "
             >
-              <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+              <div class="bg-white rounded-lg p-6 shadow-lg text-center w-full">
                 <img
                   src="/img/kbr_team/Dave_KBR_Videoedit.jpg"
                   alt="Dave, KB Racing Video Editor"
@@ -1076,7 +1108,7 @@
     <script>
       self.__next_f.push([
         1,
-        '7:["$","section",null,{"className":"py-20 bg-gray-50","children":["$","div",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center","children":[["$","$L5",null,{"children":["$","h2",null,{"className":"text-4xl font-bold text-gray-900 mb-8","children":"Our Mission"}]}],["$","$L5",null,{"delay":200,"children":["$","div",null,{"className":"bg-white rounded-lg p-8 shadow-lg","children":[["$","div",null,{"className":"w-16 h-16 flex items-center justify-center text-6xl text-orange-500 mb-6","children":["$","i",null,{"className":"ri-flag-line"}]}],["$","blockquote",null,{"className":"text-2xl text-gray-700 italic leading-relaxed","children":"\\"To help businesses grow by delivering warm leads and real brand exposure, powered by the excitement of motorsports.\\""}]]}]}],["$","$L5",null,{"delay":400,"children":["$","div",null,{"className":"mt-12 grid md:grid-cols-3 gap-8","children":[["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-heart-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Authenticity"}],["$","p",null,{"className":"text-gray-600","children":"Every connection we facilitate is built on genuine passion and shared interests."}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-target-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Quality"}],["$","p",null,{"className":"text-gray-600","children":"We deliver qualified leads that convert, not just numbers that look good on paper."}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-team-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Partnership"}],["$","p",null,{"className":"text-gray-600","children":"Your success is our success. We\'re invested in your long-term growth."}]]}]]}]}]]}]}]\n',
+        '7:["$","section",null,{"className":"py-20 bg-gray-50","children":["$","div",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center","children":[["$","$L5",null,{"children":["$","h2",null,{"className":"text-4xl font-bold text-gray-900 mb-8","children":"Our Mission"}]}],["$","$L5",null,{"delay":200,"children":["$","div",null,{"className":"bg-white rounded-lg p-8 shadow-lg","children":[["$","div",null,{"className":"w-16 h-16 flex items-center justify-center text-6xl text-orange-500 mb-6","children":["$","i",null,{"className":"ri-flag-line"}]}],["$","blockquote",null,{"className":"text-2xl text-gray-700 italic leading-relaxed","children":"\\"To help businesses grow by delivering warm leads and real brand exposure, powered by the excitement of motorsports.\\""}]]}]}],["$","$L5",null,{"delay":400,"children":["$","div",null,{"className":"mt-12 grid md:grid-cols-3 gap-8","children":[["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-heart-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Authenticity"}],["$","p",null,{"className":"text-gray-600","children":"Every connection we facilitate is built on genuine passion and shared interests."}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-medal-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Quality"}],["$","p",null,{"className":"text-gray-600","children":"We deliver qualified leads that convert, not just numbers that look good on paper."}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4","children":["$","i",null,{"className":"ri-team-line text-2xl"}]}],["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Partnership"}],["$","p",null,{"className":"text-gray-600","children":"Your success is our success. We\'re invested in your long-term growth."}]]}]]}]}]]}]}]\n',
       ]);
     </script>
     <script>
@@ -1088,7 +1120,7 @@
     <script>
       self.__next_f.push([
         1,
-        '9:["$","section",null,{"className":"py-20 bg-white","children":["$","div",null,{"className":"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8","children":[["$","$L5",null,{"children":["$","div",null,{"className":"text-center mb-16","children":[["$","h2",null,{"className":"text-4xl font-bold text-gray-900 mb-6","children":"What Makes Us Different"}],["$","p",null,{"className":"text-xl text-gray-600 max-w-3xl mx-auto","children":["Other race teams stop at exposure.",["$","br",null,{}],"Other lead-gen companies stop at data.",["$","br",null,{}],["$","br",null,{}],["$","strong",null,{"children":"KBRacing does both."}],["$","br",null,{}],["$","br",null,{}],"Our race team focuses on generating leads for our clients — and we do it with built-in visibility from our fan base, events, and social channels.",["$","br",null,{}],["$","br",null,{}],"That means when you partner with us, you\'re not just supporting a race team.",["$","br",null,{}],"You\'re fueling your business growth."]}]]}]}],["$","div",null,{"className":"grid md:grid-cols-2 gap-8","children":[["$","$L5","0",{"delay":0,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-lightning-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Real-Time Engagement"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"We capture leads at the peak of excitement when attendees are most engaged and receptive."}]]}]]}]}],["$","$L5","1",{"delay":150,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-vip-crown-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Quality Over Quantity"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Every lead is personally engaged and qualified, not scraped from generic databases."}]]}]]}]}],["$","$L5","2",{"delay":300,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-time-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"48-Hour Delivery"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Your leads are processed and delivered while the event excitement is still fresh in their minds."}]]}]]}]}],["$","$L5","3",{"delay":450,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-award-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Category Exclusivity"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Only one business per industry category, ensuring you never compete with similar services."}]]}]]}]}]]}],["$","$L5",null,{"delay":800,"children":["$","div",null,{"className":"text-center mt-12","children":["$","div",null,{"className":"bg-orange-500 text-white p-8 rounded-lg inline-block","children":[["$","h3",null,{"className":"text-2xl font-bold mb-2","children":"The Bottom Line"}],["$","p",null,{"className":"text-lg","children":"While others sell you lists, we deliver relationships."}]]}]}]}]]}]}]\n',
+        '9:["$","section",null,{"className":"py-20 bg-white","children":["$","div",null,{"className":"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8","children":[["$","$L5",null,{"children":["$","div",null,{"className":"text-center mb-16","children":[["$","h2",null,{"className":"text-4xl font-bold text-gray-900 mb-6","children":"What Makes Us Different"}],["$","p",null,{"className":"text-xl text-gray-600 max-w-3xl mx-auto","children":["Other race teams stop at exposure.",["$","br",null,{}],"Other lead-gen companies stop at data.",["$","br",null,{}],["$","br",null,{}],["$","strong",null,{"children":"KBRacing does both."}],["$","br",null,{}],["$","br",null,{}],"Our race team focuses on generating leads for our clients — and we do it with built-in visibility from our fan base, events, and social channels.",["$","br",null,{}],["$","br",null,{}],"That means when you partner with us, you\'re not just supporting a race team.",["$","br",null,{}],"You\'re fueling your business growth."]}]]}]}],["$","div",null,{"className":"grid md:grid-cols-2 gap-8","children":[["$","$L5","0",{"delay":0,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-pulse-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Real-Time Engagement"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"We capture leads at the peak of excitement when attendees are most engaged and receptive."}]]}]]}]}],["$","$L5","1",{"delay":150,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-vip-crown-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Quality Over Quantity"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Every lead is personally engaged and qualified, not scraped from generic databases."}]]}]]}]}],["$","$L5","2",{"delay":300,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-time-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"48-Hour Delivery"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Your leads are processed and delivered while the event excitement is still fresh in their minds."}]]}]]}]}],["$","$L5","3",{"delay":450,"children":["$","div",null,{"className":"flex items-start space-x-4 p-6 bg-gray-50 rounded-lg","children":[["$","div",null,{"className":"w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center flex-shrink-0","children":["$","i",null,{"className":"ri-award-line text-xl"}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl font-bold text-gray-900 mb-2","children":"Category Exclusivity"}],["$","p",null,{"className":"text-gray-600 leading-relaxed","children":"Only one business per industry category, ensuring you never compete with similar services."}]]}]]}]}]]}],["$","$L5",null,{"delay":800,"children":["$","div",null,{"className":"text-center mt-12","children":["$","div",null,{"className":"bg-orange-500 text-white p-8 rounded-lg inline-block","children":[["$","h3",null,{"className":"text-2xl font-bold mb-2","children":"The Bottom Line"}],["$","p",null,{"className":"text-lg","children":"While others sell you lists, we deliver relationships."}]]}]}]}]]}]}]\n',
       ]);
     </script>
     <script>
