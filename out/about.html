@@ -23,32 +23,36 @@
       data-precedence="next"
     />
     <style>
-      /* Force equal height cards - targets by existing classes that survive React hydration */
+      /* Force equal height cards */
 
-      /* Team section (bg-gray-50) */
-      section.bg-gray-50 .max-w-6xl .grid > div {
+      /* Team section */
+      #team-section .grid > div {
         display: flex !important;
+        height: 100% !important;
       }
-      section.bg-gray-50 .max-w-6xl .grid > div > div {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+      #team-section .grid > div > div {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
       }
-      section.bg-gray-50 .max-w-6xl .grid > div > div > p:last-child {
-        flex: 1;
+      #team-section .grid > div > div > p:last-child {
+        flex-grow: 1 !important;
       }
 
-      /* H.O.T. section (bg-gray-900) */
-      section.bg-gray-900 .max-w-6xl .grid > div {
+      /* H.O.T. section */
+      section.bg-gray-900 .grid > div {
         display: flex !important;
+        height: 100% !important;
       }
-      section.bg-gray-900 .max-w-6xl .grid > div > div {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+      section.bg-gray-900 .grid > div > div {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
       }
-      section.bg-gray-900 .max-w-6xl .grid > div > div > p:last-child {
-        flex: 1;
+      section.bg-gray-900 .grid > div > div > p:last-child {
+        flex-grow: 1 !important;
       }
     </style>
     <link
@@ -77,7 +81,7 @@
       src="/_next/static/chunks/app/about/page-2d4e2931991586c6.js"
       async=""
     ></script>
-    <title>KBR Racing</title>
+    <title>KB Racing</title>
     <meta name="description" content="Motorsports-powered Lead Generation" />
     <link rel="icon" href="/img/icons/kbr_logo_main.png" />
     <script
@@ -683,8 +687,8 @@
                 </div>
                 <p class="text-gray-600 leading-relaxed">
                   Dave is an aircraft pilot and operates his own employee
-                  recruiting enterprise. Dave handles all KBRacing splicing
-                  and editing needs.
+                  recruiting enterprise. Dave handles all KBRacing splicing and
+                  editing needs.
                 </p>
               </div>
             </div>
