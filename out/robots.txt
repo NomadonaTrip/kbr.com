@@ -1,0 +1,16 @@
+# robots.txt for KBR Racing
+# https://kbr82.com
+
+User-agent: *
+Allow: /
+
+# Disallow Next.js internal build files
+Disallow: /_next/static/chunks/
+Disallow: /_next/static/development/
+
+# Allow CSS and JS for rendering
+Allow: /_next/static/css/
+Allow: /_next/static/media/
+
+# Sitemap location
+Sitemap: https://kbr82.com/sitemap.xml
